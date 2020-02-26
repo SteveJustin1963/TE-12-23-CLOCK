@@ -12,6 +12,7 @@ Example: 7:45:32
 
 
 ## error
-https://www.facebook.com/yelich.mark
+ https://www.facebook.com/yelich.mark?fref=gs&__tn__=%2CdC-R-R&eid=ARA6Bbm6BjTPfAnMqirRO2992njaD4Vj7hEcZjNMHWWZRLK7oEDQn72N5J9P_lbtJpqxh34SM8sy_Yw2&hc_ref=ARSxcaz5NBwjrGgEfw6PQkmqm8dG-w8XeF-EnOrYepkvQB0iUK4LV2nNH5Ch1FNXL3M&dti=623556744820045&hc_location=group
+ 
 So... Has anyone ever fixed the Clock listing? I’ve typed it in and double checked all entries and I have it exactly as printed... But it doesn’t work... Can someone tell me where the error is?
 
