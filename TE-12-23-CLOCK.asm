@@ -1,9 +1,10 @@
-                        ;TE-12-23
+;TE-12-23-CLOCK
+;
 DISPBUF equ $920
 CLKBUF  equ $922
-
+;
         org $900
-START   LD IY, CLKBUF		;Load pointer to clock counting buffer
+START	    LD IY, CLKBUF	;Load pointer to clock counting buffer
 	    LD B,2		;load number of 60's to be tested
 	    LD A,(IY +0)	;Read first clock buffer value
 	    ADD A,01		;add 1 to the value
@@ -20,11 +21,11 @@ START   LD IY, CLKBUF		;Load pointer to clock counting buffer
 	    CP 24h		;TEST hours =24
 	    JR NZ,DISP		;If not GOTO 'DSP'
 	    XOR A		;ZERO A
-DISP	LD (IY + 0),A		;Store hours in clock buffer
+DISP	    LD (IY + 0),A	;Store hours in clock buffer
 	    LD B,03		;Load number of bytes to be converted
 	    LD HL,DISPBUF +6	;Load pointer to display buffer
 	    LD IX, CLKBUF	;Load pointed to clock buffer
-LOOP1	LD A,(IX + 0)		;Read CLOCK BUFFER value
+LOOP1	    LD A,(IX + 0)	;Read CLOCK BUFFER value
 	    INC IX		;Advance pointer by 1
 	    PUSH BC		;Save BC contents
 	    PUSH AF		;Save contents of A
@@ -41,7 +42,7 @@ LOOP1	LD A,(IX + 0)		;Read CLOCK BUFFER value
 	    POP BC		;Restore BC
 	    DJNZ LOOP		;Complete LOOP if B is not zero.
 	    LD B,0ffh		;Load LOOP value
-LOOP2	LD IX,DISPBUF		;Load pointer to digit patterns
+LOOP2	    LD IX,DISPBUF	;Load pointer to digit patterns
 	    PUSH BC		;Save BC contents
 	    LD B,07		;Load number of digits to be displayed
 	    LD C,40h		;Load bit pattern for display cathodes
@@ -60,7 +61,7 @@ LOOP2	LD IX,DISPBUF		;Load pointer to digit patterns
 	    POP BC		;Restore BC
 	    DJNZ LOOP2		;LOOP if all digits not displayed
 	    JP START		;Jump to START
-LOOK	LD DE, DISP		;Load DE with display pattern
+LOOK	    LD DE, DISP		;Load DE with display pattern
 	    PUSH AF		;Save AF
 	    LD A,E		;Load E into A
 	    ADD A,B		;Calculate pattern address
