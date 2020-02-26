@@ -9,3 +9,8 @@ at 98a: insert minutes
 at 98B: insert hours
 Example: 7:45:32
 989: 32 98A: 45 98B:07
+
+
+## Mark Jelic
+So... Has anyone ever fixed the Clock listing? I’ve typed it in and double checked all entries and I have it exactly as printed... But it doesn’t work... Can someone tell me where the error is?
+
